@@ -1,7 +1,8 @@
 composer install </br>
 php artisan migrate </br>
-php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider" - для laravel-admin </br>
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider" - для laravel-admin(не обязательно) </br>
 php artisan key:generate </br>
+npm install
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
