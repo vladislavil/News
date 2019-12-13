@@ -1,7 +1,7 @@
-composer install
-php artisan migrate
-php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider" - для laravel-admin
-php artisan key:generate
+composer install </br>
+php artisan migrate </br>
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider" - для laravel-admin </br>
+php artisan key:generate </br>
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
