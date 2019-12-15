@@ -16,9 +16,11 @@
         "jquery": "^3.1.1",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
+        "pug": "^2.0.4",
         "vue": "^2.1.10"
     },
     "dependencies": {
+        "laravel-mix-pug": "^0.3.0",
         "vue-router": "^3.1.3"
     }
 }

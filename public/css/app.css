@@ -7,19 +7,19 @@
 @font-face {
   font-family: "Montserrat-ExtraBold";
   font-display: swap;
-  src: url(/fonts/Montserrat-ExtraBold.eot?0a644fe2258acf039ee55e2f3a02ec52) format("eot"), url(/fonts/Montserrat-ExtraBold.woff2?86f696306454c464430c044661491696) format("woff2"), url(/fonts/Montserrat-ExtraBold.woff?c8f6bb7727c6544803c38457eaf64b98) format("woff"), url(/fonts/Montserrat-ExtraBold.ttf?a2b7bf0b5649f7a42148054aa2d1469f) format("truetype"), url(/fonts/Montserrat-ExtraBold.svg?bd1a2820452530b0b3b190cbea2cfa62#Montserrat-ExtraBold) format("svg");
+  src: url(/fonts/Montserrat-ExtraBold.eot?0a644fe2258acf039ee55e2f3a02ec52) format("eot"), url(/fonts/Montserrat-ExtraBold.woff2?86f696306454c464430c044661491696) format("woff2"), url(/fonts/Montserrat-ExtraBold.woff?c8f6bb7727c6544803c38457eaf64b98) format("woff"), url(/fonts/Montserrat-ExtraBold.ttf?a2b7bf0b5649f7a42148054aa2d1469f) format("truetype"), url(/fonts/Montserrat-ExtraBold.svg?bd1a2820452530b0b3b190cbea2cfa62) format("svg");
 }
 
 @font-face {
   font-family: "Montserrat-Regular";
   font-display: swap;
-  src: url(/fonts/Montserrat-Regular.eot?6fd3cfb86220748bb86d7daf7add87d7) format("eot"), url(/fonts/Montserrat-Regular.woff2?cdac0e14416b03c27de1bbb6504372c2) format("woff2"), url(/fonts/Montserrat-Regular.woff?10de889b9652549f62ebd788122eb00a) format("woff"), url(/fonts/Montserrat-Regular.ttf?e7f3b69fe713acca67afd83483342b2c) format("truetype"), url(/fonts/Montserrat-Regular.svg?108e0d2571cb14e320c71113144debf3#Montserrat-Regular) format("svg");
+  src: url(/fonts/Montserrat-Regular.eot?6fd3cfb86220748bb86d7daf7add87d7) format("eot"), url(/fonts/Montserrat-Regular.woff2?cdac0e14416b03c27de1bbb6504372c2) format("woff2"), url(/fonts/Montserrat-Regular.woff?10de889b9652549f62ebd788122eb00a) format("woff"), url(/fonts/Montserrat-Regular.ttf?e7f3b69fe713acca67afd83483342b2c) format("truetype"), url(/fonts/Montserrat-Regular.svg?108e0d2571cb14e320c71113144debf3) format("svg");
 }
 
 @font-face {
   font-family: "Montserrat-Light";
   font-display: swap;
-  src: url(/fonts/Montserrat-Light.eot?d7dd915fdf8de38f55afb9bc1f7a1ff7) format("eot"), url(/fonts/Montserrat-Light.woff2?350710de252b75fa243584f651204e14) format("woff2"), url(/fonts/Montserrat-Light.woff?9951dae5ac4ab6a273f87b79347f420c) format("woff"), url(/fonts/Montserrat-Light.ttf?dec4517d3250030f564f400f57320a1e) format("truetype"), url(/fonts/Montserrat-Light.svg?a086e6a41e0c5703ccb2ee869909a5f1#Montserrat-Light) format("svg");
+  src: url(/fonts/Montserrat-Light.eot?d7dd915fdf8de38f55afb9bc1f7a1ff7) format("eot"), url(/fonts/Montserrat-Light.woff2?350710de252b75fa243584f651204e14) format("woff2"), url(/fonts/Montserrat-Light.woff?9951dae5ac4ab6a273f87b79347f420c) format("woff"), url(/fonts/Montserrat-Light.ttf?dec4517d3250030f564f400f57320a1e) format("truetype"), url(/fonts/Montserrat-Light.svg?a086e6a41e0c5703ccb2ee869909a5f1) format("svg");
 }
 
 *,
@@ -139,5 +139,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.container {
+  max-width: calc(1195px + 30px);
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
