@@ -11,6 +11,7 @@ import Vue from "vue";
 import App from "./components/App";
 import VueRouter from "vue-router";
 import router from "./router";
+import Swiper from "vue-awesome-swiper";
 
 
 
@@ -20,7 +21,7 @@ import router from "./router";
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.use(VueRouter);
+Vue.use(VueRouter, Swiper);
 
 const app = new Vue({
     el: '#app',

@@ -1,14 +1,19 @@
 <template lang="pug">
-   header.header
-      Header
+  section.home
+     header.home__header
+        Header
+     .home__slider
+        Slider
 </template>
 
 <script>
    import Header from "../components/header/header";
+   import Slider from "../components/slider/slider";
    export default {
-      components: { Header },
+      components: { Header, Slider },
       data() {
          return {
+
          }
       },
       mounted() {
