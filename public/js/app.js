@@ -16409,7 +16409,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 80px;\n  background: #000; }\n  .header .container {\n    height: 100%; }\n\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%; }\n\n.header__left {\n  flex-shrink: 0; }\n\n.header__center {\n  flex-shrink: 0;\n  flex-basis: 480px;\n  margin: 0 auto; }\n\n.header__right {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  max-width: 460px;\n  height: 60px;\n  background: #cccccc; }\n\n.header__ads {\n  margin: auto; }\n\n.header__list {\n  display: flex;\n  justify-content: space-between; }\n\n.header__item {\n  flex-grow: 1;\n  flex-shrink: 0;\n  position: relative;\n  text-align: center; }\n  .header__item:not(:last-child):before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 1px;\n    height: 100%;\n    background-color: #414141; }\n\n.header__link {\n  display: block;\n  padding: 0 10px;\n  font-size: 16px;\n  color: #ffffff;\n  transition: color 0.3s; }\n  .header__link:hover {\n    color: #bbbbbb; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 80px;\n  background: #000;\n  box-shadow: 2px 1px 14px #000; }\n  .header .container {\n    height: 100%; }\n\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%; }\n\n.header__left {\n  flex-shrink: 0; }\n\n.header__center {\n  flex-shrink: 0;\n  flex-basis: 480px;\n  margin: 0 auto; }\n\n.header__right {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  max-width: 460px;\n  height: 60px;\n  background: #cccccc; }\n\n.header__ads {\n  margin: auto; }\n\n.header__list {\n  display: flex;\n  justify-content: space-between; }\n\n.header__item {\n  flex-grow: 1;\n  flex-shrink: 0;\n  position: relative;\n  text-align: center; }\n  .header__item:not(:last-child):before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 1px;\n    height: 100%;\n    background-color: #414141; }\n\n.header__link {\n  display: block;\n  padding: 0 10px;\n  font-size: 16px;\n  color: #ffffff;\n  transition: color 0.3s; }\n  .header__link:hover {\n    color: #bbbbbb; }\n", ""]);
 
 // exports
 
@@ -16664,6 +16664,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -16680,17 +16683,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   data: function data() {
     return {
-      items: [{ id: "1", title: "title1", category: "category1" }, { id: "2", title: "title2", category: "category2" }, { id: "3", title: "title3", category: "category3" }, { id: "4", title: "title4", category: "category4" }, { id: "5", title: "title5", category: "category5" }, { id: "6", title: "title6", category: "category6" }, { id: "7", title: "title7", category: "category7" }, { id: "8", title: "title8", category: "category8" }, { id: "9", title: "title9", category: "category9" }, { id: "10", title: "title10", category: "category10" }, { id: "11", title: "title11", category: "category11" }],
+      items: [{ id: "1", title: "title1", category: "category1" }, { id: "2", title: "title2", category: "category2" }, { id: "3", title: "title3", category: "category3" }, { id: "4", title: "title4", category: "category4" }, { id: "5", title: "title5", category: "category5" }],
       swiperOption: {
-        slidesPerView: 3,
+        slidesPerView: 5,
         spaceBetween: 30,
-        speed: 1000,
-        autoplay: true,
-        effect: "fade",
-        // navigation: {
-        //   nextEl: '.swiper-button-next',
-        //   prevEl: '.swiper-button-prev'
-        // },
+        // speed: 1000,
+        // autoplay: true,
+        // effect: "fade",
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
         loop: true
         //allowTouchMove: false
       },
@@ -16828,8 +16831,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -16882,7 +16883,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".card {\n  width: 100%;\n  height: 100%; }\n", ""]);
+exports.push([module.i, ".card {\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to bottom, #ffffff, #dddddd 30%, #dddddd 50%, #000000 100%);\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.card__content {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  padding: 0 20px; }\n\n.card__title {\n  color: #ffffff;\n  font-size: 16px; }\n\n.card__footer {\n  display: flex;\n  justify-content: space-between; }\n\n.card__link {\n  display: block;\n  margin-right: 5px; }\n  .card__link.card__category {\n    display: flex;\n    margin-right: 0; }\n  .card__link:last-child {\n    margin-right: 0; }\n\n.card__icon {\n  margin-right: 5px; }\n\n.card__text {\n  color: #cdcdcd;\n  font-size: 10px; }\n\n.card__details {\n  display: flex; }\n\nsvg#calendar, svg#folder, svg#user, svg#comment {\n  fill: #cdcdcd; }\n\n.swiper-container {\n  padding-bottom: 20px;\n  overflow-y: unset;\n  overflow-x: hidden; }\n\n.swiper-container-horizontal > .swiper-pagination-bullets {\n  bottom: 0;\n  text-align: right; }\n\n.swiper-pagination-clickable .swiper-pagination-bullet {\n  z-index: 20;\n  width: 25px;\n  height: 5px;\n  background-color: #646464;\n  border-radius: unset;\n  outline: none; }\n\n.swiper-pagination-bullet-active {\n  background-color: #e9e9e9; }\n", ""]);
 
 // exports
 
@@ -16895,41 +16896,49 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card" }, [
-    _c("div", { staticClass: "card__content" }, [
-      _c("div", { staticClass: "card__wrapper" }, [
-        _c("div", { staticClass: "card__img" }),
+  return _c(
+    "div",
+    {
+      staticClass: "card",
+      style: { backgroundImage: "url(" + "./images/bg.png" + ")" }
+    },
+    [
+      _c("div", { staticClass: "card__content" }, [
         _c("div", { staticClass: "card__title" }, [
           _vm._v(_vm._s(_vm.items.title))
         ]),
         _c("div", { staticClass: "card__footer" }, [
-          _c("div", { staticClass: "card__category" }, [
-            _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
-              _c(
-                "svg",
-                {
-                  attrs: {
-                    fill: "#000000",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 16 16",
-                    width: "16px",
-                    height: "16px"
-                  }
-                },
-                [
-                  _c("path", {
+          _c(
+            "a",
+            { staticClass: "card__link card__category", attrs: { href: "#" } },
+            [
+              _c("div", { staticClass: "card__icon" }, [
+                _c(
+                  "svg",
+                  {
                     attrs: {
-                      d:
-                        "M 2.5 2 C 1.675781 2 1 2.675781 1 3.5 L 1 12.5 C 1 13.324219 1.675781 14 2.5 14 L 13.5 14 C 14.324219 14 15 13.324219 15 12.5 L 15 5.5 C 15 4.675781 14.324219 4 13.5 4 L 6.796875 4 L 6.144531 2.789063 C 5.882813 2.300781 5.375 2 4.824219 2 Z M 2.5 3 L 4.824219 3 C 5.007813 3 5.175781 3.101563 5.265625 3.261719 L 5.664063 4 L 2 4 L 2 3.5 C 2 3.21875 2.21875 3 2.5 3 Z M 2 5 L 13.5 5 C 13.78125 5 14 5.21875 14 5.5 L 14 12.5 C 14 12.78125 13.78125 13 13.5 13 L 2.5 13 C 2.21875 13 2 12.78125 2 12.5 Z"
+                      id: "folder",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 16 16",
+                      width: "16px",
+                      height: "16px"
                     }
-                  })
-                ]
-              )
-            ]),
-            _c("div", { staticClass: "card__text" }, [
-              _vm._v(_vm._s(_vm.items.category))
-            ])
-          ]),
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M 2.5 2 C 1.675781 2 1 2.675781 1 3.5 L 1 12.5 C 1 13.324219 1.675781 14 2.5 14 L 13.5 14 C 14.324219 14 15 13.324219 15 12.5 L 15 5.5 C 15 4.675781 14.324219 4 13.5 4 L 6.796875 4 L 6.144531 2.789063 C 5.882813 2.300781 5.375 2 4.824219 2 Z M 2.5 3 L 4.824219 3 C 5.007813 3 5.175781 3.101563 5.265625 3.261719 L 5.664063 4 L 2 4 L 2 3.5 C 2 3.21875 2.21875 3 2.5 3 Z M 2 5 L 13.5 5 C 13.78125 5 14 5.21875 14 5.5 L 14 12.5 C 14 12.78125 13.78125 13 13.5 13 L 2.5 13 C 2.21875 13 2 12.78125 2 12.5 Z"
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _c("div", { staticClass: "card__text" }, [
+                _vm._v(_vm._s(_vm.items.category))
+              ])
+            ]
+          ),
           _c("div", { staticClass: "card__details" }, [
             _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
               _c(
@@ -16979,6 +16988,7 @@ var render = function() {
                     y: "0px",
                     width: "16px",
                     height: "16px",
+                    fill: "#cdcdcd",
                     viewBox: "0 0 511.634 511.634",
                     "xml:space": "preserve"
                   }
@@ -17001,6 +17011,7 @@ var render = function() {
                 {
                   attrs: {
                     height: "16px",
+                    id: "comment",
                     width: "16px",
                     viewBox: "-21 -47 682.66669 682",
                     xmlns: "http://www.w3.org/2000/svg"
@@ -17040,8 +17051,8 @@ var render = function() {
           ])
         ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -25233,7 +25244,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".home__slider {\n  padding-top: 17px; }\n\n.slider__card {\n  max-width: 260px;\n  height: 240px; }\n", ""]);
 
 // exports
 
@@ -25247,26 +25258,37 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "slider" }, [
-    _c(
-      "div",
-      { staticClass: "slider__content" },
-      [
-        _c(
-          "swiper",
-          { ref: "mySwiper", attrs: { options: _vm.swiperOption } },
-          _vm._l(_vm.items, function(item, index) {
-            return _c(
-              "swiper-slide",
-              { key: index },
-              [_c("Card", { attrs: { items: item } })],
-              1
-            )
-          }),
-          1
-        )
-      ],
-      1
-    )
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "slider__content" },
+        [
+          _c(
+            "swiper",
+            { ref: "mySwiper", attrs: { options: _vm.swiperOption } },
+            [
+              _vm._l(_vm.items, function(item, index) {
+                return _c("swiper-slide", { key: index }, [
+                  _c(
+                    "div",
+                    { staticClass: "slider__card" },
+                    [_c("Card", { attrs: { items: item } })],
+                    1
+                  )
+                ])
+              }),
+              _c("div", {
+                staticClass: "swiper-pagination",
+                attrs: { slot: "pagination" },
+                slot: "pagination"
+              })
+            ],
+            2
+          )
+        ],
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = []
