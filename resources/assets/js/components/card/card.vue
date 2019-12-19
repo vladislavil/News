@@ -1,6 +1,7 @@
 <template lang="pug">
-    .card(:style="{backgroundImage: 'url('+'./images/bg.png'+')'}")
+    a(href="#").card
       .card__content
+        .card__img(:style="{backgroundImage: 'url('+'./images/bg.png'+')'}")
         .card__wrapper
           .card__title {{ items.title}}
           .card__footer

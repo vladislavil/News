@@ -16409,7 +16409,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 80px;\n  background: #000;\n  box-shadow: 2px 1px 14px #000; }\n  .header .container {\n    height: 100%; }\n\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%; }\n\n.header__left {\n  flex-shrink: 0; }\n\n.header__center {\n  flex-shrink: 0;\n  flex-basis: 480px;\n  margin: 0 auto; }\n\n.header__right {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  max-width: 460px;\n  height: 60px;\n  background: #cccccc; }\n\n.header__ads {\n  margin: auto; }\n\n.header__list {\n  display: flex;\n  justify-content: space-between; }\n\n.header__item {\n  flex-grow: 1;\n  flex-shrink: 0;\n  position: relative;\n  text-align: center; }\n  .header__item:not(:last-child):before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 1px;\n    height: 100%;\n    background-color: #414141; }\n\n.header__link {\n  display: block;\n  padding: 0 10px;\n  font-size: 16px;\n  color: #ffffff;\n  transition: color 0.3s; }\n  .header__link:hover {\n    color: #bbbbbb; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 80px;\n  background: #000; }\n  .header .container {\n    height: 100%; }\n\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%; }\n\n.header__left {\n  flex-shrink: 0; }\n\n.header__center {\n  flex-shrink: 0;\n  flex-basis: 480px;\n  margin: 0 auto; }\n\n.header__right {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  max-width: 460px;\n  height: 60px;\n  background: #cccccc; }\n\n.header__ads {\n  margin: auto; }\n\n.header__list {\n  display: flex;\n  justify-content: space-between; }\n\n.header__item {\n  flex-grow: 1;\n  flex-shrink: 0;\n  position: relative;\n  text-align: center; }\n  .header__item:not(:last-child):before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 1px;\n    height: 100%;\n    background-color: #414141; }\n\n.header__link {\n  display: block;\n  padding: 0 10px;\n  font-size: 16px;\n  color: #ffffff;\n  transition: color 0.3s; }\n  .header__link:hover {\n    color: #bbbbbb; }\n", ""]);
 
 // exports
 
@@ -16832,6 +16832,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -16884,7 +16885,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".card {\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to bottom, #ffffff, #dddddd 30%, #dddddd 50%, #000000 100%);\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.card__content {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  padding: 0 20px; }\n\n.card__title {\n  color: #ffffff;\n  font-size: 16px; }\n\n.card__footer {\n  display: flex;\n  justify-content: space-between; }\n\n.card__link {\n  display: block;\n  margin-right: 5px; }\n  .card__link.card__category {\n    display: flex;\n    margin-right: 0; }\n  .card__link:last-child {\n    margin-right: 0; }\n\n.card__icon {\n  margin-right: 5px; }\n\n.card__text {\n  color: #cdcdcd;\n  font-size: 10px; }\n\n.card__details {\n  display: flex; }\n\nsvg#calendar, svg#folder, svg#user, svg#comment {\n  fill: #cdcdcd; }\n\n.swiper-container {\n  padding-bottom: 20px;\n  overflow-y: unset;\n  overflow-x: hidden; }\n\n.swiper-container-horizontal > .swiper-pagination-bullets {\n  bottom: 0;\n  text-align: right; }\n\n.swiper-pagination-clickable .swiper-pagination-bullet {\n  z-index: 20;\n  width: 25px;\n  height: 5px;\n  background-color: #646464;\n  border-radius: unset;\n  outline: none; }\n\n.swiper-pagination-bullet-active {\n  background-color: #e9e9e9; }\n", ""]);
+exports.push([module.i, ".card {\n  display: block;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to bottom, #ffffff, #dddddd 30%, #dddddd 50%, #000000 100%);\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center; }\n  .card:hover .card__img {\n    opacity: 1; }\n\n.card__content {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  padding: 0 20px; }\n\n.card__img {\n  width: 100%;\n  height: 100%;\n  opacity: 0.5;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: opacity 0.4s; }\n\n.card__title {\n  color: #ffffff;\n  font-size: 16px; }\n\n.card__footer {\n  display: flex;\n  justify-content: space-between; }\n\n.card__link {\n  display: block;\n  margin-right: 5px; }\n  .card__link.card__category {\n    display: flex;\n    margin-right: 0; }\n  .card__link:last-child {\n    margin-right: 0; }\n\n.card__icon {\n  margin-right: 5px; }\n\n.card__text {\n  color: #cdcdcd;\n  font-size: 10px; }\n\n.card__details {\n  display: flex; }\n\nsvg#calendar, svg#folder, svg#user, svg#comment {\n  fill: #cdcdcd; }\n\n.swiper-container {\n  position: static; }\n\n.swiper-container-horizontal > .swiper-pagination-bullets {\n  bottom: -20px;\n  text-align: right; }\n\n.swiper-pagination-clickable .swiper-pagination-bullet {\n  z-index: 20;\n  width: 25px;\n  height: 5px;\n  background-color: #646464;\n  border-radius: unset;\n  outline: none; }\n\n.swiper-pagination-bullet-active {\n  background-color: #e9e9e9; }\n", ""]);
 
 // exports
 
@@ -16897,168 +16898,162 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "card",
-      style: { backgroundImage: "url(" + "./images/bg.png" + ")" }
-    },
-    [
-      _c("div", { staticClass: "card__content" }, [
-        _c("div", { staticClass: "card__wrapper" }, [
-          _c("div", { staticClass: "card__title" }, [
-            _vm._v(_vm._s(_vm.items.title))
-          ]),
-          _c("div", { staticClass: "card__footer" }, [
-            _c(
-              "a",
-              {
-                staticClass: "card__link card__category",
-                attrs: { href: "#" }
-              },
-              [
-                _c("div", { staticClass: "card__icon" }, [
-                  _c(
-                    "svg",
-                    {
-                      attrs: {
-                        id: "folder",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 16 16",
-                        width: "16px",
-                        height: "16px"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M 2.5 2 C 1.675781 2 1 2.675781 1 3.5 L 1 12.5 C 1 13.324219 1.675781 14 2.5 14 L 13.5 14 C 14.324219 14 15 13.324219 15 12.5 L 15 5.5 C 15 4.675781 14.324219 4 13.5 4 L 6.796875 4 L 6.144531 2.789063 C 5.882813 2.300781 5.375 2 4.824219 2 Z M 2.5 3 L 4.824219 3 C 5.007813 3 5.175781 3.101563 5.265625 3.261719 L 5.664063 4 L 2 4 L 2 3.5 C 2 3.21875 2.21875 3 2.5 3 Z M 2 5 L 13.5 5 C 13.78125 5 14 5.21875 14 5.5 L 14 12.5 C 14 12.78125 13.78125 13 13.5 13 L 2.5 13 C 2.21875 13 2 12.78125 2 12.5 Z"
-                        }
-                      })
-                    ]
-                  )
-                ]),
-                _c("div", { staticClass: "card__text" }, [
-                  _vm._v(_vm._s(_vm.items.category))
-                ])
-              ]
-            ),
-            _c("div", { staticClass: "card__details" }, [
-              _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
+  return _c("a", { staticClass: "card", attrs: { href: "#" } }, [
+    _c("div", { staticClass: "card__content" }, [
+      _c("div", {
+        staticClass: "card__img",
+        style: { backgroundImage: "url(" + "./images/bg.png" + ")" }
+      }),
+      _c("div", { staticClass: "card__wrapper" }, [
+        _c("div", { staticClass: "card__title" }, [
+          _vm._v(_vm._s(_vm.items.title))
+        ]),
+        _c("div", { staticClass: "card__footer" }, [
+          _c(
+            "a",
+            { staticClass: "card__link card__category", attrs: { href: "#" } },
+            [
+              _c("div", { staticClass: "card__icon" }, [
                 _c(
                   "svg",
                   {
-                    staticStyle: { "enable-background": "new 0 0 512 512" },
                     attrs: {
-                      version: "1.1",
-                      id: "user",
-                      width: "16px",
-                      height: "16px",
+                      id: "folder",
                       xmlns: "http://www.w3.org/2000/svg",
-                      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-                      x: "0px",
-                      y: "0px",
-                      viewBox: "0 0 512 512",
-                      "xml:space": "preserve"
-                    }
-                  },
-                  [
-                    _c("g", [
-                      _c("g", [
-                        _c("path", {
-                          attrs: {
-                            d:
-                              "M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148\n\t\t\tC404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962\n\t\t\tc-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216\n\t\t\th40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40\n\t\t\tc59.551,0,108,48.448,108,108S315.551,256,256,256z"
-                          }
-                        })
-                      ])
-                    ])
-                  ]
-                )
-              ]),
-              _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
-                _c(
-                  "svg",
-                  {
-                    staticStyle: {
-                      "enable-background": "new 0 0 511.634 511.634"
-                    },
-                    attrs: {
-                      version: "1.1",
-                      id: "calendar",
-                      xmlns: "http://www.w3.org/2000/svg",
-                      "xmlns:xlink": "http://www.w3.org/1999/xlink",
-                      x: "0px",
-                      y: "0px",
+                      viewBox: "0 0 16 16",
                       width: "16px",
-                      height: "16px",
-                      fill: "#cdcdcd",
-                      viewBox: "0 0 511.634 511.634",
-                      "xml:space": "preserve"
-                    }
-                  },
-                  [
-                    _c("g", [
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M482.513,83.942c-7.225-7.233-15.797-10.85-25.694-10.85h-36.541v-27.41c0-12.56-4.477-23.315-13.422-32.261\n\t\tC397.906,4.475,387.157,0,374.591,0h-18.268c-12.565,0-23.318,4.475-32.264,13.422c-8.949,8.945-13.422,19.701-13.422,32.261v27.41\n\t\th-109.63v-27.41c0-12.56-4.475-23.315-13.422-32.261C178.64,4.475,167.886,0,155.321,0H137.05\n\t\tc-12.562,0-23.317,4.475-32.264,13.422c-8.945,8.945-13.421,19.701-13.421,32.261v27.41H54.823c-9.9,0-18.464,3.617-25.697,10.85\n\t\tc-7.233,7.232-10.85,15.8-10.85,25.697v365.453c0,9.89,3.617,18.456,10.85,25.693c7.232,7.231,15.796,10.849,25.697,10.849h401.989\n\t\tc9.897,0,18.47-3.617,25.694-10.849c7.234-7.234,10.852-15.804,10.852-25.693V109.639\n\t\tC493.357,99.739,489.743,91.175,482.513,83.942z M347.187,45.686c0-2.667,0.849-4.858,2.56-6.567\n\t\tc1.711-1.711,3.901-2.568,6.57-2.568h18.268c2.67,0,4.853,0.854,6.57,2.568c1.712,1.712,2.567,3.903,2.567,6.567v82.224\n\t\tc0,2.666-0.855,4.853-2.567,6.567c-1.718,1.709-3.9,2.568-6.57,2.568h-18.268c-2.669,0-4.859-0.855-6.57-2.568\n\t\tc-1.711-1.715-2.56-3.901-2.56-6.567V45.686z M127.915,45.686c0-2.667,0.855-4.858,2.568-6.567\n\t\tc1.714-1.711,3.901-2.568,6.567-2.568h18.271c2.667,0,4.858,0.854,6.567,2.568c1.711,1.712,2.57,3.903,2.57,6.567v82.224\n\t\tc0,2.666-0.855,4.856-2.57,6.567c-1.713,1.709-3.9,2.568-6.567,2.568H137.05c-2.666,0-4.856-0.855-6.567-2.568\n\t\tc-1.709-1.715-2.568-3.901-2.568-6.567V45.686z M456.812,475.088H54.823v-292.36h401.989V475.088z"
-                        }
-                      })
-                    ])
-                  ]
-                )
-              ]),
-              _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
-                _c(
-                  "svg",
-                  {
-                    attrs: {
-                      height: "16px",
-                      id: "comment",
-                      width: "16px",
-                      viewBox: "-21 -47 682.66669 682",
-                      xmlns: "http://www.w3.org/2000/svg"
+                      height: "16px"
                     }
                   },
                   [
                     _c("path", {
                       attrs: {
                         d:
-                          "m552.011719-1.332031h-464.023438c-48.515625 0-87.988281 39.464843-87.988281 87.988281v283.972656c0 48.414063 39.300781 87.816406 87.675781 87.988282v128.863281l185.191407-128.863281h279.144531c48.515625 0 87.988281-39.472657 87.988281-87.988282v-283.972656c0-48.523438-39.472656-87.988281-87.988281-87.988281zm50.488281 371.960937c0 27.835938-22.648438 50.488282-50.488281 50.488282h-290.910157l-135.925781 94.585937v-94.585937h-37.1875c-27.839843 0-50.488281-22.652344-50.488281-50.488282v-283.972656c0-27.84375 22.648438-50.488281 50.488281-50.488281h464.023438c27.839843 0 50.488281 22.644531 50.488281 50.488281zm0 0"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "m171.292969 131.171875h297.414062v37.5h-297.414062zm0 0"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "m171.292969 211.171875h297.414062v37.5h-297.414062zm0 0"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("path", {
-                      attrs: {
-                        d:
-                          "m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"
+                          "M 2.5 2 C 1.675781 2 1 2.675781 1 3.5 L 1 12.5 C 1 13.324219 1.675781 14 2.5 14 L 13.5 14 C 14.324219 14 15 13.324219 15 12.5 L 15 5.5 C 15 4.675781 14.324219 4 13.5 4 L 6.796875 4 L 6.144531 2.789063 C 5.882813 2.300781 5.375 2 4.824219 2 Z M 2.5 3 L 4.824219 3 C 5.007813 3 5.175781 3.101563 5.265625 3.261719 L 5.664063 4 L 2 4 L 2 3.5 C 2 3.21875 2.21875 3 2.5 3 Z M 2 5 L 13.5 5 C 13.78125 5 14 5.21875 14 5.5 L 14 12.5 C 14 12.78125 13.78125 13 13.5 13 L 2.5 13 C 2.21875 13 2 12.78125 2 12.5 Z"
                       }
                     })
                   ]
                 )
+              ]),
+              _c("div", { staticClass: "card__text" }, [
+                _vm._v(_vm._s(_vm.items.category))
               ])
+            ]
+          ),
+          _c("div", { staticClass: "card__details" }, [
+            _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
+              _c(
+                "svg",
+                {
+                  staticStyle: { "enable-background": "new 0 0 512 512" },
+                  attrs: {
+                    version: "1.1",
+                    id: "user",
+                    width: "16px",
+                    height: "16px",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                    x: "0px",
+                    y: "0px",
+                    viewBox: "0 0 512 512",
+                    "xml:space": "preserve"
+                  }
+                },
+                [
+                  _c("g", [
+                    _c("g", [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148\n\t\t\tC404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962\n\t\t\tc-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216\n\t\t\th40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40\n\t\t\tc59.551,0,108,48.448,108,108S315.551,256,256,256z"
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
+              _c(
+                "svg",
+                {
+                  staticStyle: {
+                    "enable-background": "new 0 0 511.634 511.634"
+                  },
+                  attrs: {
+                    version: "1.1",
+                    id: "calendar",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                    x: "0px",
+                    y: "0px",
+                    width: "16px",
+                    height: "16px",
+                    fill: "#cdcdcd",
+                    viewBox: "0 0 511.634 511.634",
+                    "xml:space": "preserve"
+                  }
+                },
+                [
+                  _c("g", [
+                    _c("path", {
+                      attrs: {
+                        d:
+                          "M482.513,83.942c-7.225-7.233-15.797-10.85-25.694-10.85h-36.541v-27.41c0-12.56-4.477-23.315-13.422-32.261\n\t\tC397.906,4.475,387.157,0,374.591,0h-18.268c-12.565,0-23.318,4.475-32.264,13.422c-8.949,8.945-13.422,19.701-13.422,32.261v27.41\n\t\th-109.63v-27.41c0-12.56-4.475-23.315-13.422-32.261C178.64,4.475,167.886,0,155.321,0H137.05\n\t\tc-12.562,0-23.317,4.475-32.264,13.422c-8.945,8.945-13.421,19.701-13.421,32.261v27.41H54.823c-9.9,0-18.464,3.617-25.697,10.85\n\t\tc-7.233,7.232-10.85,15.8-10.85,25.697v365.453c0,9.89,3.617,18.456,10.85,25.693c7.232,7.231,15.796,10.849,25.697,10.849h401.989\n\t\tc9.897,0,18.47-3.617,25.694-10.849c7.234-7.234,10.852-15.804,10.852-25.693V109.639\n\t\tC493.357,99.739,489.743,91.175,482.513,83.942z M347.187,45.686c0-2.667,0.849-4.858,2.56-6.567\n\t\tc1.711-1.711,3.901-2.568,6.57-2.568h18.268c2.67,0,4.853,0.854,6.57,2.568c1.712,1.712,2.567,3.903,2.567,6.567v82.224\n\t\tc0,2.666-0.855,4.853-2.567,6.567c-1.718,1.709-3.9,2.568-6.57,2.568h-18.268c-2.669,0-4.859-0.855-6.57-2.568\n\t\tc-1.711-1.715-2.56-3.901-2.56-6.567V45.686z M127.915,45.686c0-2.667,0.855-4.858,2.568-6.567\n\t\tc1.714-1.711,3.901-2.568,6.567-2.568h18.271c2.667,0,4.858,0.854,6.567,2.568c1.711,1.712,2.57,3.903,2.57,6.567v82.224\n\t\tc0,2.666-0.855,4.856-2.57,6.567c-1.713,1.709-3.9,2.568-6.567,2.568H137.05c-2.666,0-4.856-0.855-6.567-2.568\n\t\tc-1.709-1.715-2.568-3.901-2.568-6.567V45.686z M456.812,475.088H54.823v-292.36h401.989V475.088z"
+                      }
+                    })
+                  ])
+                ]
+              )
+            ]),
+            _c("a", { staticClass: "card__link", attrs: { href: "#" } }, [
+              _c(
+                "svg",
+                {
+                  attrs: {
+                    height: "16px",
+                    id: "comment",
+                    width: "16px",
+                    viewBox: "-21 -47 682.66669 682",
+                    xmlns: "http://www.w3.org/2000/svg"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "m552.011719-1.332031h-464.023438c-48.515625 0-87.988281 39.464843-87.988281 87.988281v283.972656c0 48.414063 39.300781 87.816406 87.675781 87.988282v128.863281l185.191407-128.863281h279.144531c48.515625 0 87.988281-39.472657 87.988281-87.988282v-283.972656c0-48.523438-39.472656-87.988281-87.988281-87.988281zm50.488281 371.960937c0 27.835938-22.648438 50.488282-50.488281 50.488282h-290.910157l-135.925781 94.585937v-94.585937h-37.1875c-27.839843 0-50.488281-22.652344-50.488281-50.488282v-283.972656c0-27.84375 22.648438-50.488281 50.488281-50.488281h464.023438c27.839843 0 50.488281 22.644531 50.488281 50.488281zm0 0"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "m171.292969 131.171875h297.414062v37.5h-297.414062zm0 0"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "m171.292969 211.171875h297.414062v37.5h-297.414062zm0 0"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"
+                    }
+                  })
+                ]
+              )
             ])
           ])
         ])
       ])
-    ]
-  )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -25250,7 +25245,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".home__slider {\n  padding-top: 17px; }\n\n.slider__card {\n  max-width: 260px;\n  height: 240px; }\n", ""]);
+exports.push([module.i, ".home__slider {\n  padding: 17px 0;\n  background: linear-gradient(to bottom, #000000, transparent); }\n\n.slider__card {\n  max-width: 260px;\n  height: 240px; }\n\n.slider__content {\n  position: relative; }\n", ""]);
 
 // exports
 
