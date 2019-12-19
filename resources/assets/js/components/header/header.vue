@@ -4,7 +4,7 @@
         .header__content
            .header__left
               .header__logo
-                 img(src="./logo.png")
+                 img(src="images/logo.png")
            .header__center
               ul.header__list
                  li.header__item
