@@ -1,5 +1,7 @@
 <template lang="pug">
   .popular
+    .popular__title
+      | Popupar posts
     .popular__content
       popular-card
       popular-card

@@ -1,7 +1,26 @@
 .popular
   max-width: 280px
-  box-shadow: 0 0 4px 0 #666666
+
+.popular__title
+  position: relative
+  margin-bottom: 10px
+  font-weight: bold
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    width: 175px
+    height: 100%
+    background-image: url("./line.png")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
 
 .popular__content
+  box-shadow: 0 0 4px 0 #666666
+  border-top: 4px solid #000000
   width: 100%
   padding: 10px
