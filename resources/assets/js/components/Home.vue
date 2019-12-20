@@ -7,9 +7,10 @@
      section.home__popular
        .container
           popular
-     section.home__login
-       .container
           login
+     //section.home__login
+       .container
+
 
 </template>
 

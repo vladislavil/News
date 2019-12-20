@@ -9,6 +9,7 @@
             button(type="submit" name="auth").login__submit Войти
             label.login__label Запомнить меня
               input(type="checkbox" name="remember").login__checkbox
+          a(href="#").login__link Забыли пароль?
 
 </template>
 

@@ -16277,6 +16277,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -25682,10 +25683,7 @@ var render = function() {
     _c("header", { staticClass: "home__header" }, [_c("Header")], 1),
     _c("section", { staticClass: "home__slider" }, [_c("Slider")], 1),
     _c("section", { staticClass: "home__popular" }, [
-      _c("div", { staticClass: "container" }, [_c("popular")], 1)
-    ]),
-    _c("section", { staticClass: "home__login" }, [
-      _c("div", { staticClass: "container" }, [_c("login")], 1)
+      _c("div", { staticClass: "container" }, [_c("popular"), _c("login")], 1)
     ])
   ])
 }
@@ -25822,6 +25820,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -25874,7 +25873,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".login {\n  max-width: 280px; }\n\n.login__title {\n  position: relative;\n  font-weight: bold;\n  margin-bottom: 10px; }\n  .login__title::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 175px;\n    height: 100%;\n    background-image: url(" + escape(__webpack_require__(80)) + ");\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center; }\n\n.login__content {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0 0 4px 0 #666666;\n  border-top: 4px solid #000000;\n  width: 100%;\n  padding: 10px; }\n\n.login__form {\n  display: flex;\n  flex-direction: column; }\n\n.login__input {\n  margin-bottom: 20px;\n  padding: 15px;\n  outline: none;\n  border: 1px solid;\n  border-color: #dddddd; }\n  .login__input:focus::placeholder {\n    color: #cccccc; }\n  .login__input::placeholder {\n    color: #aaaaaa; }\n\n.login__submit {\n  max-width: 80px;\n  background-color: #55b2f3;\n  outline: none;\n  border: none;\n  color: #ffffff;\n  padding: 10px 20px; }\n\n.login__label {\n  outline: none;\n  cursor: pointer;\n  user-select: none; }\n\n.login__checkbox {\n  outline: none;\n  cursor: pointer; }\n\n.login__form-wrapper {\n  display: flex;\n  justify-content: space-between; }\n", ""]);
+exports.push([module.i, ".login {\n  max-width: 280px; }\n\n.login__title {\n  position: relative;\n  font-weight: bold;\n  margin-bottom: 10px; }\n  .login__title::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 175px;\n    height: 100%;\n    background-image: url(" + escape(__webpack_require__(80)) + ");\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center; }\n\n.login__content {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0 0 4px 0 #666666;\n  border-top: 4px solid #000000;\n  width: 100%;\n  padding: 10px; }\n\n.login__form {\n  display: flex;\n  flex-direction: column; }\n\n.login__input {\n  margin-bottom: 20px;\n  padding: 15px;\n  outline: none;\n  border: 1px solid;\n  border-color: #dddddd; }\n  .login__input:focus::placeholder {\n    color: #cccccc; }\n  .login__input::placeholder {\n    color: #aaaaaa; }\n\n.login__submit {\n  max-width: 80px;\n  background-color: #55b2f3;\n  outline: none;\n  border: 1px solid transparent;\n  color: #ffffff;\n  padding: 10px 20px;\n  transition: background-color 0.3s, color 0.3s, border-color 0.3s;\n  cursor: pointer; }\n  .login__submit:hover {\n    background-color: #ffffff;\n    color: #55b2f3;\n    border-color: #55b2f3; }\n\n.login__label {\n  outline: none;\n  cursor: pointer;\n  user-select: none; }\n\n.login__checkbox {\n  outline: none;\n  cursor: pointer; }\n\n.login__form-wrapper {\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 20px; }\n\n.login__link {\n  margin-right: auto;\n  font-weight: bold;\n  color: #000000;\n  transition: color 0.3s; }\n  .login__link:hover {\n    color: #555555; }\n", ""]);
 
 // exports
 
@@ -25922,6 +25921,9 @@ var staticRenderFns = [
                 attrs: { type: "checkbox", name: "remember" }
               })
             ])
+          ]),
+          _c("a", { staticClass: "login__link", attrs: { href: "#" } }, [
+            _vm._v("Забыли пароль?")
           ])
         ])
       ])
