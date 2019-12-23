@@ -1,8 +1,10 @@
 <template lang="pug">
    .posts
-      .posts__cards
-         .posts__card(v-for="(item, index) in items" :key="index")
-            card(:items="item")
+      .posts__title Latest Posts
+      .posts__wrapper
+        .posts__cards
+           .posts__card(v-for="(item, index) in postsItem" :key="index")
+              card(:items="item")
 
 </template>
 
@@ -15,6 +17,7 @@
       data() {
 
          return {
+            isLast: false,
             items: [
                {id: "1", title: "title1", category: "category1"},
                {id: "2", title: "title2", category: "category2"},
@@ -29,6 +32,20 @@
                {id: "11", title: "title11", category: "category11"}
             ],
          }
+      },
+      methods: {
+        postsItem: function () {
+          let buf = [];
+          let last = 0;
+          this.items.map(function(value, key) {
+            last = value.length % 2;
+            if(last === 1) {
+              this.isLast = true;
+            }
+            console.log(value.key);
+          });
+          return buf;
+        }
       }
    }
 </script>

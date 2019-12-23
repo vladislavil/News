@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home
+  section.home(v-scroll="handleScroll")
      header.home__header
         Header
      section.home__slider
@@ -10,28 +10,17 @@
               section.home__posts
                 posts
               section.home__sidebar
-                 popular
-                 login
+                .home__sidebar-wrapper(:class="{fixed: isFixed}")
+                   popular
+                   login
      //section.home__login
        .container
 
 
 </template>
 
-<style lang="sass">
-   .home__content
-      padding-top: 30px
-   .home__wrapper
-      display: flex
-   .home__posts
-      margin-right: 30px
-
-   .home__sidebar
-      width: 280px
-      flex-shrink: 0
-</style>
-
 <script>
+   import './index.sass';
    import Login from "../components/login/login";
    import Header from "../components/header/header";
    import Slider from "../components/slider/slider";
@@ -42,11 +31,27 @@
       components: { Header, Slider, Popular, Login, Posts},
       data() {
          return {
-
+            isFixed: false
          }
       },
-      mounted() {
-         console.log("Home");
-      }
+      methods: {
+       handleScroll: function (evt, el) {
+         let sidebar = document.querySelector(".home__sidebar");
+         let header = document.querySelector(".home__header");
+         let header_height = header.offsetHeight;
+         let slider = document.querySelector(".home__slider");
+         let first_child = sidebar.firstChild;
+         let slider_height = slider.offsetHeight;
+         console.log(window.scrollY);
+
+         if(window.scrollY > (slider_height + header_height)) {
+           this.isFixed = true;
+
+         }
+         else {
+           this.isFixed = false;
+         }
+       }
+     }
    }
 </script>

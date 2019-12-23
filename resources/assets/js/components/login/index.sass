@@ -64,9 +64,40 @@
     border-color: #55b2f3
 
 .login__label
+  color: #9f9f9f
   outline: none
   cursor: pointer
   user-select: none
+  position: relative
+  padding-left: 20px
+  margin-bottom: auto
+
+  input[type=checkbox]
+    overflow: hidden
+    width: 0
+    height: 0
+    padding: 0
+    border: 0
+    clip: rect(0 0 0 0)
+
+    &:after
+      content: ""
+      width: 15px
+      height: 15px
+      border: 1px solid #9f9f9f
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+
+    &:checked
+
+      &::after
+        content: "\2713"
+        font-size: 15px
+        line-height: 0.9
+        font-weight: bold
+
 
 .login__checkbox
   outline: none

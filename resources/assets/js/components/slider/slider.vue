@@ -42,8 +42,8 @@
         swiperOption: {
           slidesPerView: 5,
           spaceBetween: 30,
-          // speed: 1000,
-          // autoplay: true,
+          speed: 1000,
+          autoplay: true,
           // effect: "fade",
           pagination: {
             el: '.swiper-pagination',
