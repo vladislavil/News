@@ -1,5 +1,8 @@
 .login
-  max-width: 280px
+  //max-width: 280px
+  &:hover, &:focus
+    .login__content
+      box-shadow: 0 0 8px 0 #666666
 
 .login__title
   position: relative
@@ -25,6 +28,7 @@
   border-top: 4px solid #000000
   width: 100%
   padding: 10px
+  transition: box-sadow 0.3s
 
 .login__form
   display: flex

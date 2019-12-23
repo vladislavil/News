@@ -3,7 +3,7 @@
      .container
         .header__content
            .header__left
-              .header__logo
+              a(href="#").header__logo
                  img(src="images/logo.png")
            .header__center
               ul.header__list
