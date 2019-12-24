@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home(v-scroll="handleScroll")
+  section.home
      header.home__header
         Header
      section.home__slider
