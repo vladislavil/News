@@ -8,6 +8,7 @@
 
     <title>Laravel</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://vk.com/js/api/openapi.js?162" type="text/javascript"> </script>
 </head>
     <body>
         <div id="app">

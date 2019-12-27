@@ -6,13 +6,14 @@
         Slider
      section.home__content
         .container
-           .home__wrapper
-              section.home__posts
-                posts
-              section.home__sidebar
-                .home__sidebar-wrapper(:class="{fixed: isFixed}")
-                   popular
-                   login
+         a(id="auth" @click="login") Войти
+         .home__wrapper
+            section.home__posts
+              posts
+            section.home__sidebar
+              .home__sidebar-wrapper(:class="{fixed: isFixed}")
+                 popular
+                 login
      //section.home__login
        .container
 
@@ -21,6 +22,7 @@
 
 <script>
    import './index.sass';
+   import axios from "axios";
    import Login from "../components/login/login";
    import Header from "../components/header/header";
    import Slider from "../components/slider/slider";
@@ -31,27 +33,40 @@
       components: { Header, Slider, Popular, Login, Posts},
       data() {
          return {
+            info: null,
             isFixed: false
          }
       },
+     mounted() {
+
+       VK.UI.button('auth');
+
+       // https://oauth.vk.com/authorize?client_id=7261107&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52 - авторизация
+       // let response = fetch('http://cors-anywhere.herokuapp.com/https://api.vk.com/method/gorups.get?user_id=210393531&access_token=a2d03d55a2d03d55a2d03d5501a2bef6e6aa2d0a2d03d55fcd4a66f04556438a0d524bb&v=5.61')
+       //   .then(response => (this.info = response.json()))
+       //   .then(result => (this.info = result))
+       //   .catch(error => {
+       //       console.log(error);
+       //   });
+     },
+      computed: {
+        getInfo: function() {
+          VK.Auth.login(function(response) {
+            if (response.session) {
+              return response.session.user.id;
+            } else {
+              return "Пльзователь не авторизован";
+            }
+          });
+        }
+      },
       methods: {
-       handleScroll: function (evt, el) {
-         let sidebar = document.querySelector(".home__sidebar");
-         let header = document.querySelector(".home__header");
-         let header_height = header.offsetHeight;
-         let slider = document.querySelector(".home__slider");
-         let first_child = sidebar.firstChild;
-         let slider_height = slider.offsetHeight;
-         console.log(window.scrollY);
-
-         if(window.scrollY > (slider_height + header_height)) {
-           this.isFixed = true;
-
-         }
-         else {
-           this.isFixed = false;
-         }
-       }
+       login() {
+         document.querySelector('#auth').onclick = function(event){
+           event.preventDefault();
+           VK.Auth.login(null, VK.access.FRIENDS);
+         };
+       },
      }
    }
 </script>
