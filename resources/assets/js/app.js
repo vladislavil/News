@@ -13,6 +13,8 @@ import VueRouter from "vue-router";
 import router from "./router";
 import Swiper from "vue-awesome-swiper";
 
+import {store} from "../store/user";
+
 
 
 /**
@@ -40,5 +42,6 @@ Vue.directive('scroll', {
 const app = new Vue({
     el: '#app',
     render: h => h(App),
-    router
+    router,
+    store: store
 });
