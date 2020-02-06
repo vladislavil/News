@@ -7,7 +7,8 @@
      section.home__content
         .container
          a(id="auth" @click="login") Войти
-         div {{ $store.state.authorize }}
+         div(v-if="auth") {{postsList}}
+            div(v-if="auth") {{photos}}
          .home__wrapper
             section.home__posts
               posts
@@ -29,19 +30,34 @@
    import Slider from "../components/slider/slider";
    import Popular from "../components/popular/popular";
    import Posts from "../components/posts/posts";
+   import {mapGetters} from "vuex";
 
    export default {
       
       components: { Header, Slider, Popular, Login, Posts},
       data() {
          return {
-            info: '' ,
             isFixed: false
          }
       },
+      mounted() {
+         this.getItems();
+      },
+      computed: {
+         ...mapGetters('user', {
+            auth: 'getAuthorize'
+         }),
+         ...mapGetters('posts', {
+            postsList: 'postsText',
+            photos: 'postsPhotos'
+         }),
+      },
       methods: {
          login() {
-            this.$store.dispatch('loginUser');
+            this.$store.dispatch('user/loginUser');
+         },
+         getItems() {
+            this.$store.dispatch('posts/getPosts');
          }
       }
    }

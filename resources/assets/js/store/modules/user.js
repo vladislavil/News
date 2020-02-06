@@ -1,9 +1,5 @@
-import Vue from "vue";
-import Vuex from "vuex";
-
-Vue.use(Vuex);
-
-export const store = new Vuex.Store({
+export default {
+    namespaced: true,
     state: {
         authorize: '',
         user: ''
@@ -47,4 +43,4 @@ export const store = new Vuex.Store({
             return state.user
         }
     }
-});
+};

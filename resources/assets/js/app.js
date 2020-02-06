@@ -13,7 +13,7 @@ import VueRouter from "vue-router";
 import router from "./router";
 import Swiper from "vue-awesome-swiper";
 
-import {store} from "../store/user";
+import {store} from "./store/store";
 
 
 
