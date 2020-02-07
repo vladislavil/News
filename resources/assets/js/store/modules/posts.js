@@ -12,18 +12,8 @@ export default {
       postsPhoto(state) {
          return state.postsPhoto;
       },
-      itemsMap(state) {
-         let itemsMap = {};
-
-         for(let i = 0; i < state.postsID.length; i++) {
-             let post = state.postsID[i];
-             itemsMap[postsID[i]] = post;
-         }
-
-         return itemsMap;
-     },
-      post: (state, getters) => (id) => {
-         return getters.itemsMap;
+      post(state) {
+         return state.postsID;
      }
    },
    mutations: {
@@ -33,7 +23,8 @@ export default {
             let items = [];
             items.push(data.response); 
             items.map((elem) => {
-               state.postsID.push(elem.id);
+               console.log(elem)
+               state.postsID.push(elem.count);
                elem.items.map((item) => {
                   state.postsText.push(item.text);
                   item.attachments.map((photos)=> {

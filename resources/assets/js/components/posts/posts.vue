@@ -3,7 +3,7 @@
       .posts__title Latest Posts
       .posts__wrapper
         .posts__cards
-           router-link.posts__card( :to="'/home/' + id[index]" v-for="(item, index) in items" :key="index")
+           router-link.posts__card( @click="onModal" :to="'/home/' + id[index]" v-for="(item, index) in items" :key="index")
               card( :items='item' :photo="photo[index]")
 </template>
 
@@ -15,7 +15,7 @@
 
    export default {
       components: {Card},
-      props: ['items', 'photo'],
+      props: ['items', 'photo', 'show'],
       data() {
 
          return {
@@ -26,6 +26,13 @@
          ...mapGetters('posts', {
             id: "post"
          })
+      },
+      methods: {
+         onModal() {
+            this.$emit('modal', {
+               show: true
+            })
+         }
       }
    }
 </script>

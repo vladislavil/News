@@ -1,23 +1,21 @@
 <template lang="pug">
   section.home
-     header.home__header
+      header.home__header
         Header
-     section.home__slider
+      section.home__slider
         Slider
-     section.home__content
+      section.home__content
         .container
-         a(id="auth" @click="login") Войти
-         .home__wrapper
-            transition(name="fade")
-               section.home__posts
-                  posts( :items='postsList' :photo='photos')
-            section.home__sidebar
-              .home__sidebar-wrapper(:class="{fixed: isFixed}")
-                 popular
-                 login
-     //section.home__login
-       .container
-
+            a(id="auth" @click="login") Войти
+            .home__wrapper
+               transition(name="fade")
+                  section.home__posts
+                     posts( :items='postsList' :photo='photos' :show="showModal")
+               section.home__sidebar
+                  .home__sidebar-wrapper(:class="{fixed: isFixed}")
+                     popular
+                     login
+      post-full(v-if="showModal" @modal="isModal($event, data)")
 
 </template>
 
@@ -29,14 +27,16 @@
    import Slider from "../components/slider/slider";
    import Popular from "../components/popular/popular";
    import Posts from "../components/posts/posts";
+   import postPage from "../components/postFull/postFull"
    import {mapGetters} from "vuex";
 
    export default {
       
-      components: { Header, Slider, Popular, Login, Posts},
+      components: { Header, Slider, Popular, Login, Posts, postPage},
       data() {
          return {
-            isFixed: false
+            isFixed: false,
+            showModal: false
          }
       },
       created() {
@@ -58,6 +58,9 @@
          },
          getItems() {
             this.$store.dispatch('posts/getPosts');
+         },
+         isModal(e, data) {
+            this.showModal = data.show;
          }
       }
    }
