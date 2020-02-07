@@ -7,11 +7,10 @@
      section.home__content
         .container
          a(id="auth" @click="login") Войти
-         div(v-if="auth") {{postsList}}
-            div(v-if="auth") {{photos}}
          .home__wrapper
-            section.home__posts
-              posts
+            transition(name="fade")
+               section.home__posts
+                  posts( :items='postsList' :photo='photos')
             section.home__sidebar
               .home__sidebar-wrapper(:class="{fixed: isFixed}")
                  popular
@@ -40,7 +39,7 @@
             isFixed: false
          }
       },
-      mounted() {
+      created() {
          this.getItems();
       },
       computed: {
@@ -49,7 +48,8 @@
          }),
          ...mapGetters('posts', {
             postsList: 'postsText',
-            photos: 'postsPhotos'
+            photos: 'postsPhoto'
+            //id: 'postsID'
          }),
       },
       methods: {
@@ -62,3 +62,37 @@
       }
    }
 </script>
+<style lang="sass">
+
+.fade-enter
+
+.fade-enter-active
+   animation: pulse 3s
+
+.fade-enter-to
+
+.fade-live
+
+.fade-live-active
+   
+
+.fade-live-to
+
+@-webkit-keyframes pulse
+  from
+    transform: scale3d(1, 1, 1)
+  50% 
+    transform: scale3d(1.05, 1.05, 1.05)
+  to
+    transform: scale3d(1, 1, 1)
+
+@keyframes pulse 
+  from 
+    transform: scale3d(1, 1, 1)
+  50% 
+    transform: scale3d(1.05, 1.05, 1.05)
+  to 
+    transform: scale3d(1, 1, 1)
+.pulse
+  animation-name: pulse
+</style>

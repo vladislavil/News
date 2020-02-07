@@ -3,9 +3,8 @@
       .posts__title Latest Posts
       .posts__wrapper
         .posts__cards
-           .posts__card(v-for="(item, index) in items" :key="index")
-              card(:items="item")
-              div {{item}}
+           router-link.posts__card( :to="'/home/' + id[index]" v-for="(item, index) in items" :key="index")
+              card( :items='item' :photo="photo[index]")
 </template>
 
 <script>
@@ -15,8 +14,8 @@
    import {mapGetters} from "vuex";
 
    export default {
-      props:['items'],
       components: {Card},
+      props: ['items', 'photo'],
       data() {
 
          return {
@@ -25,8 +24,8 @@
       },
       computed: {
          ...mapGetters('posts', {
-            postsList: 'posts'
-         }),
+            id: "post"
+         })
       }
    }
 </script>

@@ -1,30 +1,47 @@
 export default {
    namespaced: true,
    state: {
+      postsID: [],
       postsText: [],
-      postsPhotos: []
+      postsPhoto: []
    },
    getters: {
       postsText(state) {
          return state.postsText;
       },
-      postsPhotos(state) {
-         return state.postsPhotos;
-      }
+      postsPhoto(state) {
+         return state.postsPhoto;
+      },
+      itemsMap(state) {
+         let itemsMap = {};
+
+         for(let i = 0; i < state.postsID.length; i++) {
+             let post = state.postsID[i];
+             itemsMap[postsID[i]] = post;
+         }
+
+         return itemsMap;
+     },
+      post: (state, getters) => (id) => {
+         return getters.itemsMap;
+     }
    },
    mutations: {
       getPosts(state) {
-         state.postsText.lenght = 0;
+         state.postsText.length = 0;
          VK.api("wall.get", {"domain": 'ovsyanochan','count': '10', "v":"5.103"}, function (data) {
             let items = [];
             items.push(data.response); 
             items.map((elem) => {
+               state.postsID.push(elem.id);
                elem.items.map((item) => {
                   state.postsText.push(item.text);
                   item.attachments.map((photos)=> {
-                     if(photos.photo.sizes[3]) {
-                        state.postsPhotos.push(photos.photo.sizes[3].url);
-
+                     if('photo' in photos) {
+                        state.postsPhoto.push(photos.photo.sizes[3].url);
+                     }
+                     else {
+                        state.postsPhoto.push("")
                      }
                   });
                });

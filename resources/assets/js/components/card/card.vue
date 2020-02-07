@@ -1,14 +1,14 @@
 <template lang="pug">
     a(href="#").card
       .card__content
-        .card__img(:style="{backgroundImage: 'url('+'./images/bg.png'+')'}")
+        .card__img(:style="{backgroundImage: 'url(' + photo + ')'}")
         .card__wrapper
           .card__title 
           .card__footer
             a(href="#").card__link.card__category
               .card__icon
                 include folder.svg
-              .card__text 
+              .card__text {{ items }}
             .card__details
               a(href="#").card__link
                 include user.svg
@@ -29,7 +29,7 @@
 
       }
     },
-    props: ['items']
+    props: ['items', 'photo']
   }
 
 </script>
