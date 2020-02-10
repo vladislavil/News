@@ -8,7 +8,7 @@
         .container
             a(id="auth" @click="login") Войти
             .home__wrapper
-               transition(name="fade")
+               transition( name="fade" )
                   section.home__posts
                      posts( :items='items' @modal="isModal($event)")
                section.home__sidebar
@@ -42,9 +42,9 @@
             i: null
          }
       },
-      created() {
-         this.getItems();
-      },
+      // created() {
+      //    this.getItems();
+      // },
       computed: {
          ...mapGetters('user', {
             auth: 'getAuthorize'
@@ -57,9 +57,9 @@
          login() {
             this.$store.dispatch('user/loginUser');
          },
-         getItems() {
-            this.$store.dispatch('posts/getPosts');
-         },
+         // getItems() {
+         //    this.$store.dispatch('posts/getPosts');
+         // },
          isModal(data) {
             this.showModal = data.show;
             this.i = data.index
@@ -67,7 +67,7 @@
       }
    }
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
 
 .fade-enter
 
@@ -98,6 +98,6 @@
     transform: scale3d(1.05, 1.05, 1.05)
   to 
     transform: scale3d(1, 1, 1)
-.pulse
-  animation-name: pulse
+// .pulse
+//   animation-name: pulse
 </style>

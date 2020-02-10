@@ -1,13 +1,18 @@
 import VueRouter from "vue-router";
 import Example from "./components/Example";
 import Home from "./components/Home";
-import postFull from "./components/postFull/postFull"
+
+import {store} from "../js/store/store";
 
 export default new VueRouter({
    routes: [
       {
          path:"/home",
-         component: Home
+         component: Home,
+         beforeEnter(from, to, next) {
+            store.dispatch('posts/getPosts');
+            next();
+         }
       },
       {
          path:"/",
