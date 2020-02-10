@@ -10,10 +10,6 @@ export default new VueRouter({
          component: Home
       },
       {
-         path:"/home/:id",
-         component: postFull
-      },
-      {
          path:"/",
          component: Example
       },

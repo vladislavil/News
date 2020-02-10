@@ -1,49 +1,26 @@
 export default {
    namespaced: true,
    state: {
-      postsID: [],
-      postsText: [],
-      postsPhoto: []
+      posts: []
    },
    getters: {
-      postsText(state) {
-         return state.postsText;
-      },
-      postsPhoto(state) {
-         return state.postsPhoto;
-      },
-      post(state) {
-         return state.postsID;
+
+      posts(state) {
+         return state.posts;
      }
    },
    mutations: {
       getPosts(state) {
-         state.postsText.length = 0;
-         VK.api("wall.get", {"domain": 'ovsyanochan','count': '10', "v":"5.103"}, function (data) {
-            let items = [];
-            items.push(data.response); 
-            items.map((elem) => {
-               console.log(elem)
-               state.postsID.push(elem.count);
-               elem.items.map((item) => {
-                  state.postsText.push(item.text);
-                  item.attachments.map((photos)=> {
-                     if('photo' in photos) {
-                        state.postsPhoto.push(photos.photo.sizes[3].url);
-                     }
-                     else {
-                        state.postsPhoto.push("")
-                     }
-                  });
-               });
-            });
-            // items.map((elem)=> {
-            //    elem.items.map((item)=> {
-            //       item.attachments.map((photos)=> {
-            //          console.log(photos.photo.sizes[3].url)
-            //       })
-            //    })
-            // });
+         state.posts.length = 0;
+         VK.api("wall.get", {"domain": 'ovsyanochan','count': '50', "v":"5.103"}, function (data) {
+            let list = [];
+            list.push(data.response.items); 
+            for( let i = 0; i < list[0].length; i++) {
+               if(list[0][i].text && ('photo' in list[0][i].attachments[0])) {
+                  state.posts.push(new Object({ text: list[0][i].text, photo: list[0][i].attachments[0].photo.sizes[3].url }));
+               }
+
+            }
          });
       }
    },

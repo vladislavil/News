@@ -3,19 +3,21 @@
       header.home__header
         Header
       section.home__slider
-        Slider
+        Slider( :items='items' )
       section.home__content
         .container
             a(id="auth" @click="login") Войти
             .home__wrapper
                transition(name="fade")
                   section.home__posts
-                     posts( :items='postsList' :photo='photos' :show="showModal")
+                     posts( :items='items' @modal="isModal($event)")
                section.home__sidebar
                   .home__sidebar-wrapper(:class="{fixed: isFixed}")
                      popular
                      login
-      post-full(v-if="showModal" @modal="isModal($event, data)")
+      post-page(v-if="showModal" @close="showModal = !showModal")
+         div(slot="header") {{ items[i].text }}
+         img(slot="body" :src="items[i].photo")
 
 </template>
 
@@ -36,7 +38,8 @@
       data() {
          return {
             isFixed: false,
-            showModal: false
+            showModal: false,
+            i: null
          }
       },
       created() {
@@ -47,9 +50,7 @@
             auth: 'getAuthorize'
          }),
          ...mapGetters('posts', {
-            postsList: 'postsText',
-            photos: 'postsPhoto'
-            //id: 'postsID'
+            items: 'posts'
          }),
       },
       methods: {
@@ -59,8 +60,9 @@
          getItems() {
             this.$store.dispatch('posts/getPosts');
          },
-         isModal(e, data) {
+         isModal(data) {
             this.showModal = data.show;
+            this.i = data.index
          }
       }
    }

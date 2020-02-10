@@ -1,5 +1,5 @@
 <template lang="pug">
-    a(href="#").card
+    a(href="#" onClick="return false").card
       .card__content
         .card__img(:style="{backgroundImage: 'url(' + photo + ')'}")
         .card__wrapper

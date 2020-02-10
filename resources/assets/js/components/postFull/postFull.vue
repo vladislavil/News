@@ -9,11 +9,9 @@
                .modal-body
                   slot(name='body')
                      | default body
-               .modal-footer
-                  slot(name='footer')
-                     | default footer
-                     button.modal-default-button(@click="$emit('close')")
-                     | OK
+
+                  button.modal-default-button(@click="onClose")
+                    | OK
 </template>
 
 <script>
@@ -24,6 +22,12 @@ import {mapGetters} from "vuex";
       data() {
          return {
          }
+      },
+      methods: {
+        onClose() {
+          document.body.classList.toggle('no-scroll');
+          this.$emit('close');
+        }
       }
    }
 </script>
@@ -81,7 +85,6 @@ import {mapGetters} from "vuex";
 
 .modal-enter .modal-container
 .modal-leave-active .modal-container 
-  -webkit-transform: scale(1.1)
   transform: scale(1.1)
 
 
