@@ -6,18 +6,23 @@
         Slider( :items='items' )
       section.home__content
         .container
-            a(id="auth" @click="login") Войти
+            a(id="auth" @click="login" v-if='!auth' ) Войти
+            div( v-if='auth')
+               div 
+                  img(:src="img")
+                  div {{ user }}
             .home__wrapper
                transition( name="fade" )
                   section.home__posts
                      posts( :items='items' @modal="isModal($event)")
                section.home__sidebar
-                  .home__sidebar-wrapper(:class="{fixed: isFixed}")
+                  .home__sidebar-wrapper
                      popular
                      login
       post-page(v-if="showModal" @close="showModal = !showModal")
          div(slot="header") {{ items[i].text }}
          img(slot="body" :src="items[i].photo")
+      preloader(v-if="!load")
 
 </template>
 
@@ -29,37 +34,47 @@
    import Slider from "../components/slider/slider";
    import Popular from "../components/popular/popular";
    import Posts from "../components/posts/posts";
-   import postPage from "../components/postFull/postFull"
+   import postPage from "../components/postFull/postFull";
+   import Preloader from "../components/preloader/Preloader";
+
+
    import {mapGetters} from "vuex";
 
    export default {
       
-      components: { Header, Slider, Popular, Login, Posts, postPage},
+      components: { Header, Slider, Popular, Login, Posts, postPage, Preloader},
       data() {
          return {
-            isFixed: false,
             showModal: false,
             i: null
          }
       },
-      // created() {
-      //    this.getItems();
-      // },
+      mounted() {
+         window.onload = () => {
+            this.$store.commit('posts/windowLoad');
+         }
+      },
       computed: {
          ...mapGetters('user', {
-            auth: 'getAuthorize'
+            auth: 'getAuthorize',
+            user: 'getUser',
+            img: 'photo',
+            tock: 'getTocken'
          }),
          ...mapGetters('posts', {
-            items: 'posts'
+            items: 'posts',
+            load: 'isLoad'
          }),
+         LogIn() {
+            if(this.auth === true) {
+               sessionStorage.setItem("tocket", this.tock);
+            }
+         }
       },
       methods: {
          login() {
             this.$store.dispatch('user/loginUser');
          },
-         // getItems() {
-         //    this.$store.dispatch('posts/getPosts');
-         // },
          isModal(data) {
             this.showModal = data.show;
             this.i = data.index

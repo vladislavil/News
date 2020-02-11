@@ -11,6 +11,7 @@ export default new VueRouter({
          component: Home,
          beforeEnter(from, to, next) {
             store.dispatch('posts/getPosts');
+            console.log(2);
             next();
          }
       },
