@@ -1,6 +1,6 @@
 import VueRouter from "vue-router";
 import Example from "./components/Example";
-import Home from "./components/Home";
+import Home from "../../views/Home/Home";
 
 import {store} from "../js/store/store";
 

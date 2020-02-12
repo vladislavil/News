@@ -28,14 +28,13 @@
 
 <script>
    import './index.sass';
-   import axios from "axios";
-   import Login from "../components/login/login";
-   import Header from "../components/header/header";
-   import Slider from "../components/slider/slider";
-   import Popular from "../components/popular/popular";
-   import Posts from "../components/posts/posts";
-   import postPage from "../components/postFull/postFull";
-   import Preloader from "../components/preloader/Preloader";
+   import Login from "../../assets/js/components/login/login";
+   import Header from "../../assets/js/components/header/header";
+   import Slider from "../../assets/js/components/slider/slider";
+   import Popular from "../../assets/js/components/popular/popular";
+   import Posts from "../../assets/js/components/posts/posts";
+   import postPage from "../../assets/js/components/postFull/postFull";
+   import Preloader from "../../assets/js/components/preloader/Preloader";
 
 
    import {mapGetters} from "vuex";

@@ -2,7 +2,7 @@
   .slider
     .container
       .slider__content
-        swiper(:options="swiperOption" ref="mySwiper")
+        swiper(:options="swiperOption" )
           swiper-slide(v-for="(item, index) in itemsList" :key="index")
             .slider__card
               Card(:photo="item.photo")
@@ -29,18 +29,21 @@
       return {
         swiperOption: {
           slidesPerView: 5,
+          slidesPerGroup: 1,
           spaceBetween: 30,
-          speed: 1000,
-          autoplay: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+          },
           // effect: "fade",
+          // loop: true,
+          // loopFillGroupWithBlank: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true
           },
-          loop: true,
           //allowTouchMove: false
         },
-        swiperSlides: [10]
       }
     },
     computed: {
@@ -54,13 +57,5 @@
         return buf;
       }
     },
-    mounted() {
-      setInterval(() => {
-        console.log('simulate async data');
-        if (this.swiperSlides.length < 10) {
-          this.swiperSlides.push(this.swiperSlides.length + 1)
-        }
-      }, 3000);
-    }
   }
 </script>
